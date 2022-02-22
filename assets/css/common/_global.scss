@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body,
+html {
+	height: 100%; 
+	// overflow: hidden;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	font-size: 17px;
+	@include media-breakpoint-down(md) {
+		font-size: 16px;
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+ul {
+	padding-left: 0;
+	li {
+		list-style: none;
+	}
+}
+
+h1, h2, h3, h4 {
+	text-transform: uppercase;
+}
+
+h1, h2, h3 {
+	font-family: "Poppins", sans-serif;
+	font-weight: 900;
+}
+
+h4, p, a {
+	font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+	font-size: 2.6rem;
+	letter-spacing: 2.2px;
+	@include media-breakpoint-down(sm) {
+		font-size: 1.7rem;
+	}
+	
+}
+
+h2 {
+	font-size: 2.18rem;
+	letter-spacing: 2.77px;
+	@include media-breakpoint-down(sm) {
+		font-size: 1.7rem;
+	}
+
+}
+
+h3 {
+	font-size: 1.3rem;
+	@include media-breakpoint-down(sm) {
+		font-size: 0.9rem;
+	}
+}
+
+h4, p, a {
+	font-size: 1rem;
+	letter-spacing: 0.85px;
+	@include media-breakpoint-down(sm) {
+		font-size: 0.9rem;
+	}
+}
+
+i {
+	font-size: 1.4rem;
+}
+
+.background {
+	background-color: $background; 
+}
+
+.swoosh-background {
+	background-color: $swoosh-background;
+}
+
+.pink {
+	color: $pink
+}
+
+.pink-link {
+	text-transform: uppercase;
+	text-decoration: underline;
+	&:hover {
+		color: $highlight;
+	}
+}
+
+.cream {
+	color: $cream;
+}
+
+.black {
+	color: $black;
+}
+
+.black-background {
+	background-color: $black;
+}
+
+.pink-background {
+	background: $pink;
+}
+
+.highlight {
+	background-color: $highlight;
+}
+
+.hover--highlight {
+	&:hover {
+		color: $highlight;
+		transition: 0.4s;
+	}
+}
+
+.highlight--pink {
+	&:hover {
+		color: $highlight;
+		transition: 0.4s;
+	}
+}

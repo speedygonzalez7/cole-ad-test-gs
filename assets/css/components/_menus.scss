@@ -1,0 +1,50 @@
+.nav-menu {
+	padding: 30px 40px 49px;
+	position: fixed;
+	z-index: 999999999999;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 454px;
+	height: 100%;
+	overflow-y: scroll;
+	transform: translate(100%, 0);
+    transition: all 0.2s ease-in-out;
+    @include media-breakpoint-down(sm) {
+    	width: 100%;
+    }
+	&--toggle {
+		transform: translate(0, 0);
+		transition: all 0.2s ease-in-out;
+	}
+	&__header {
+		margin: 0 0 114px;
+		.close-btn {
+			cursor: pointer;
+		}
+	}
+	&__copy {
+		ul {
+			margin: 0 0 97px;
+			li {
+				list-style: none;
+				a {
+					text-decoration: none;
+					&:hover {
+						color: $pink;
+						transition: 0.3s;
+					}
+				}
+				a.active-link {
+					color: $pink;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	&__social {
+		a {
+			margin: 0 12px 0 0;
+		}
+	}
+}

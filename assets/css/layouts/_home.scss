@@ -1,0 +1,259 @@
+.home-hero {
+	position: relative;
+	padding: 80px 0 225px;
+	.skt-img {
+		margin: 0 auto 27px;
+	}
+	.cs-img {
+		margin: 0 auto 35px;
+	}
+	.background-image {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50%;
+		@include media-breakpoint-down(md) {
+			background-position: left;
+		}
+	}
+	.waves {
+		position: absolute;
+		height: 133px;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 99999999;
+		background-size: 1280px;
+		background-position: 50%;
+	}
+	// .left {
+	// 	background-image: url('./images/test.png');
+	// 	left: 0;
+	// 	width: 50%;
+	// 	min-width: 500px;
+	// 	&:after {
+	// 		content: '';
+	// 		position: absolute;
+	// 		top: 0;
+	// 		right: 0;
+	// 		bottom: 0;
+	// 		z-index: 999999;
+	// 		background-color: red;
+	// 	}
+	// }
+	// .right {
+	// 	background-image: url('./images/right.png');
+	// 	right: 0;
+	// 	width: 55%;
+	// }
+	.overlay {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: #1C1C1C 0% 0% no-repeat padding-box;
+		mix-blend-mode: multiply;
+		opacity: 0.8;
+		z-index: 10;
+	}
+	&__copy { 
+		position: relative;
+		z-index: 999;
+		h1 {
+			margin: 0 0 34px;
+		}
+		h3 {
+			text-transform: initial;
+			// width: 60%;
+			margin: 0 auto 52px;
+			font-weight: normal;
+		}
+	}
+}
+
+.brand-new-products {
+	position: relative;
+	padding: 70px 0 278px;
+	@include media-breakpoint-down(lg) {
+		padding: 70px 0 188px;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		height: 133px;
+		background-image: url('./assets/images/waves--swoosh.svg');
+		background-size: 1280px;
+	}
+	h4 {
+		margin-bottom: 16px;
+	}
+	h2 {
+		margin-bottom: 63px;
+	}
+	&__card {
+		text-decoration: none;
+		&:hover {
+			h3 {
+				color: $highlight;
+			}
+		}
+		&--image {
+			width: 100%;
+			position: relative;
+			// height: 269px;
+			// background-position: 50%;
+			// background-size: cover;
+			// background-repeat: no-repeat;
+			// box-shadow: 5px 15px 30px #00000029;
+			img {
+				opacity: 1;
+			}
+			.product--initial {
+
+			}
+			.product--hover {
+				position: absolute;
+			    top: 0;
+			    right: 0;
+			    left: 0;
+			    bottom: 0;
+			    object-fit: contain;
+			    opacity: 0;
+			    transition: opacity .2s;
+			}
+			&:hover {
+				.product--hover {
+					opacity: 1;
+				}
+			}
+		}
+		// &--image:nth-child(1) {
+		// 	background-image: url('../images/deck_1.png');
+		// }
+		// &--image:nth-child(2) {
+		// 	background-image: url('../images/hoodie_1.png');
+		// }
+		&--copy {
+			padding: 0 6px;
+		}
+		&--title {
+			text-align: center;
+		}
+	}
+	&__bottom {
+		margin-top: 70px;
+	} 
+}
+
+.two-column-section {
+	margin-top: -110px;
+	&__row {
+		position: relative;
+		z-index: 10;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 5%;
+		@include media-breakpoint-down(lg) {
+			padding: 0;
+		}
+	}
+	&__row:first-child {
+		margin-bottom: 166px;
+		@include media-breakpoint-down(md) {
+			margin-bottom: 60px;
+		}
+	}
+	&--item {
+		width: 49%;
+	}
+	&--copy {
+		h2 {
+			margin: 0 0 15px;
+		}
+		p {
+			margin: 0 0 25px;
+		}
+	}
+}
+
+.two-column--image:first-child {
+	text-align: right;
+}
+
+
+.five-stars {
+	position: relative;
+	padding: 151px 0 181px;
+	@include media-breakpoint-down(md) {
+		padding: 75px 0 90px;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		z-index: 2;
+		top: -133px;
+		right: 0;
+		left: 0;
+		height: 133px;
+		background-image: url('assets/images/waves--grey.svg');
+		background-size: 1280px;
+	}
+	img {
+		margin: 28px 0 35px;
+	}
+}
+
+.newsletter {
+	position: relative;
+	z-index: 99;
+	padding: 0 0 68px;
+	&--item {
+		display: inline-block;
+		width: 49%;
+	}
+	&--image {
+		margin: -95px 0 0;
+		padding-left: 5%;
+		@include media-breakpoint-down(xl) {
+			padding-left: 0;
+			width: 43%;
+		}
+		@include media-breakpoint-down(lg) {
+			display: none;
+		}
+	}
+	&--copy {
+		padding: 76px 0 0;
+		@include media-breakpoint-down(xl) {
+			width: 56%;
+		}
+		@include media-breakpoint-down(lg) {
+			width: 100%;
+		}
+		@include media-breakpoint-down(sm) {
+			padding: 55px 0 0;
+		}
+		h2 {
+			margin: 19px 0 20px;
+		}
+		h3 {
+			letter-spacing: 1.1px;
+			font-weight: normal;
+			text-transform: initial;
+			margin-bottom: 41px;
+		}
+		a {
+			margin-left: 10px;
+		}
+	}
+}
